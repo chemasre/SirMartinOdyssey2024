@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SirMartinUpper
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Cadera
+    m_Weight: 0
+  - m_Path: Cadera/PiernaAltaD
+    m_Weight: 0
+  - m_Path: Cadera/PiernaAltaD/PiernaBajaD
+    m_Weight: 0
+  - m_Path: Cadera/PiernaAltaD/PiernaBajaD/PieD
+    m_Weight: 0
+  - m_Path: Cadera/PiernaAltaI
+    m_Weight: 0
+  - m_Path: Cadera/PiernaAltaI/PiernaBajaI
+    m_Weight: 0
+  - m_Path: Cadera/PiernaAltaI/PiernaBajaI/PieI
+    m_Weight: 0
+  - m_Path: Cadera/Torso
+    m_Weight: 1
+  - m_Path: Cadera/Torso/BrazoD
+    m_Weight: 1
+  - m_Path: Cadera/Torso/BrazoD/AntebrazoD
+    m_Weight: 1
+  - m_Path: Cadera/Torso/BrazoD/AntebrazoD/ManoD
+    m_Weight: 1
+  - m_Path: Cadera/Torso/BrazoD/AntebrazoD/ManoD/Shield
+    m_Weight: 0
+  - m_Path: Cadera/Torso/BrazoI
+    m_Weight: 1
+  - m_Path: Cadera/Torso/BrazoI/AntebrazoI
+    m_Weight: 1
+  - m_Path: Cadera/Torso/BrazoI/AntebrazoI/ManoI
+    m_Weight: 1
+  - m_Path: Cadera/Torso/BrazoI/AntebrazoI/ManoI/Sword
+    m_Weight: 0
+  - m_Path: Cadera/Torso/Cabeza
+    m_Weight: 1
+  - m_Path: Cuerpo
+    m_Weight: 0
