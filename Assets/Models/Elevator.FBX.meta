@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bef345c3cf4ff244d8bae464aa44d8e4
+guid: 28d4c27b18ccdd44b8249794dbfb57b1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,28 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Brick
-    second: {fileID: 2100000, guid: bdd8b0a228615d346b23c5e7a6d64f05, type: 2}
+      name: Elevator1
+    second: {fileID: 2100000, guid: f2847694ada9aee498c5b4d27023ce5e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Door
-    second: {fileID: 2100000, guid: b5637a54a4af4124599b4c83477279b4, type: 2}
+      name: Elevator2
+    second: {fileID: 2100000, guid: df81eb94fe84a0d45917ed10ef2f52c8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material #152
-    second: {fileID: 2100000, guid: 05701aaa465759a47998eaabd7abfaed, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Path
-    second: {fileID: 2100000, guid: 5032abc81e33fdb4a835053f978ae794, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Rock
-    second: {fileID: 2100000, guid: cfe1a63e80fd749458c62fd195d28c82, type: 2}
+      name: Elevator3
+    second: {fileID: 2100000, guid: 8ce253e6dd426d14dbe2af35e91938f7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -95,13 +85,13 @@ ModelImporter:
     useFileScale: 1
     strictVertexDataChecks: 0
   tangentSpace:
-    normalSmoothAngle: 30
-    normalImportMode: 1
+    normalSmoothAngle: 60
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
-    normalSmoothingSource: 2
+    normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
   humanDescription:
