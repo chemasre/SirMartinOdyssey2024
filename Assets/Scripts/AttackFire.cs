@@ -60,8 +60,8 @@ public class AttackFire : MonoBehaviour
         animator.SetTrigger("AttackFire");
         animator.SetBool("FirePrepareHold", true);
         animator.SetBool("FireAttackHold", true);
-        prepareTimer = 3;
-        fireTimer = 9;
+        prepareTimer = 0.2f;
+        fireTimer = 3;
     }
 
 }

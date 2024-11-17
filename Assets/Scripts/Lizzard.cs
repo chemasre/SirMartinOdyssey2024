@@ -7,7 +7,6 @@ public class Lizzard : MonoBehaviour
     public AttackFire attackFire;
     public AttackSlash attackSlash;
     public NavmeshFollow follow;
-    public Fall fall;
     public Sensor attackSensor;
 
     public Animator animator;
@@ -24,7 +23,6 @@ public class Lizzard : MonoBehaviour
         if(animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
         {
             // Estamos en movement
-            Debug.Log("Estamos en state movement");
             follow.pause = false;
 
             if(attackSensor.presence == true)
@@ -42,7 +40,6 @@ public class Lizzard : MonoBehaviour
         }
         else
         {
-            Debug.Log("No estamos en state movement");
             follow.pause = true;
 
         }

@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fall : MonoBehaviour
+public class LizzardHit : MonoBehaviour
 {
     public Animator animator;
     public Sensor hitSensor;
 
     public float holdTimer;
 
+    public int hits;
+    public GameObject dieParticlesPrefab;
+    public GameObject hitParticlesPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        hits = 3;
     }
 
     // Update is called once per frame
@@ -20,7 +24,7 @@ public class Fall : MonoBehaviour
     {
         if(hitSensor.entered)
         {
-            StartFall();
+            ReceiveHit();
         }
 
         holdTimer = holdTimer - Time.deltaTime;
@@ -34,14 +38,27 @@ public class Fall : MonoBehaviour
             animator.SetBool("FallHold", false);
         }
 
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Dead"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 
-    void StartFall()
+    void ReceiveHit()
     {
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
+        hits = hits - 1;
+
+        if(hits > 0)
         {
+            Instantiate(hitParticlesPrefab, transform.position, transform.rotation);
             animator.SetTrigger("Fall");
-            holdTimer = 4;
+            holdTimer = 2;
+        }
+        else
+        {
+            animator.SetTrigger("Die");
+            Instantiate(dieParticlesPrefab, transform.position, transform.rotation);
         }
     }
 }
