@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
+using Unity.Cinemachine;
 
 public class SirMartin : MonoBehaviour
 {
@@ -17,6 +17,12 @@ public class SirMartin : MonoBehaviour
 
     public CameraSelector cameraSelector;
 
+    Vector3 cameraDirection;
+    float inputVertical;
+    float inputHorizontal;
+    bool holdCameraDirection;
+
+    bool controlEnabled;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +31,8 @@ public class SirMartin : MonoBehaviour
         cameraSelector.selected = 0;
 
         Cursor.lockState = CursorLockMode.Locked;
+
+        controlEnabled = true;
     }
 
     // Update is called once per frame
@@ -60,8 +68,22 @@ public class SirMartin : MonoBehaviour
             cameraSelector.selected = 3;
         }
 
-        float inputVertical = Input.GetAxis("Vertical");
-        float inputHorizontal = Input.GetAxis("Horizontal");
+        if(inputVertical != Input.GetAxis("Vertical") || inputHorizontal != Input.GetAxis("Horizontal"))
+        {
+            holdCameraDirection = false;
+        }
+
+        if(controlEnabled)
+        {
+            inputVertical = Input.GetAxis("Vertical");
+            inputHorizontal = Input.GetAxis("Horizontal");
+        }
+        else
+        {
+            inputVertical = 0;
+            inputHorizontal = 0;
+        }
+
 
         if (controlType == 0)
         {
@@ -87,7 +109,10 @@ public class SirMartin : MonoBehaviour
             Vector3 inputDirection = new Vector3(inputHorizontal, 0, inputVertical);
             float inputMagnitude = inputDirection.magnitude;
 
-            Vector3 cameraDirection = mainCamera.TransformDirection(inputDirection);
+            if(holdCameraDirection == false)
+            {
+                cameraDirection = mainCamera.TransformDirection(inputDirection);
+            }
 
             Vector3 movementDirection = new Vector3(cameraDirection.x, 0, cameraDirection.z);
             movementDirection = movementDirection.normalized * inputMagnitude;
@@ -100,7 +125,11 @@ public class SirMartin : MonoBehaviour
             movement.controlType = 2;
 
             Vector3 cameraForward = new Vector3(0, 0, 1);
-            Vector3 cameraDirection = mainCamera.TransformDirection(cameraForward);
+
+            if(holdCameraDirection == false)
+            {
+                cameraDirection = mainCamera.TransformDirection(cameraForward);
+            }
             Vector3 movementDirection = new Vector3(cameraDirection.x, 0, cameraDirection.z);
             movementDirection = movementDirection.normalized;
             movement.direction = movementDirection;
@@ -124,16 +153,26 @@ public class SirMartin : MonoBehaviour
 
     }
 
-    public void CinemachineCameraActivated(ICinemachineCamera next, ICinemachineCamera previous)
+    public void CinemachineCameraActivated(ICinemachineMixer mixer, ICinemachineCamera activated)
     {
-        Debug.Log("Activated camera " + next.Name);
+        Debug.Log("Activated camera " + activated.Name);
+        CinemachineVirtualCameraBase activatedCamera = (CinemachineVirtualCameraBase)activated;
 
-        if(next.Priority == 20)
+        holdCameraDirection = true;
+
+        if(activatedCamera.Priority.Value == 30)
         {
+            controlEnabled = false;
+        }
+        else if (activatedCamera.Priority.Value == 20)
+        {
+            controlEnabled = true;
             controlType = 1;
         }
-        else if(next.Priority == 10)
+        else if (activatedCamera.Priority.Value == 10)
         {
+            controlEnabled = true;
+
             if (cameraSelector.selected == 0)
             {
                 controlType = 1;
