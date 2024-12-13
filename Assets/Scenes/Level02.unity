@@ -2503,6 +2503,7 @@ GameObject:
   - component: {fileID: 1839347456}
   - component: {fileID: 1839347458}
   - component: {fileID: 1839347457}
+  - component: {fileID: 1839347459}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -2518,8 +2519,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839347455}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0010247439, y: 0.99889797, z: -0.03880735, w: -0.026376795}
-  m_LocalPosition: {x: -38.55253, y: 8.866966, z: 80.38851}
+  m_LocalRotation: {x: -0.015935536, y: 0.98215944, z: -0.098003715, w: -0.15970045}
+  m_LocalPosition: {x: -12.875446, y: 20.969872, z: 76.81326}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2597,6 +2598,23 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1839347459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839347455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoiseProfile: {fileID: 11400000, guid: 8608ec81ee27a15488d33f9dad239e91, type: 2}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  AmplitudeGain: 1
+  FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!114 &1845664736 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8641853547252914801, guid: b3b037ad16b24644cae906fd0991c2a8, type: 3}
@@ -2731,6 +2749,22 @@ PrefabInstance:
       value: Orbital
       objectReference: {fileID: 0}
     - target: {fileID: 249681322474413835, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: Priority.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 249681322474413835, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: Priority.m_Value
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 249681322474413835, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: m_LegacyPriority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 249681322474413835, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: m_StreamingVersion
+      value: 20230301
+      objectReference: {fileID: 0}
+    - target: {fileID: 249681322474413835, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
       propertyPath: Target.LookAtTarget
       value: 
       objectReference: {fileID: 853583304}
@@ -2846,6 +2880,22 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 690897659}
+    - target: {fileID: 5380681164585693814, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: Priority.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380681164585693814, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: Priority.m_Value
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380681164585693814, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: m_LegacyPriority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380681164585693814, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: m_StreamingVersion
+      value: 20230301
+      objectReference: {fileID: 0}
     - target: {fileID: 5380681164585693814, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
