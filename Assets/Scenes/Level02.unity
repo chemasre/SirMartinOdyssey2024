@@ -259,6 +259,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 674340280032488212, guid: bef345c3cf4ff244d8bae464aa44d8e4, type: 3}
+--- !u!1 &121090387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5627823228322893031, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+  m_PrefabInstance: {fileID: 1292440095722670335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &159424749
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,31 +448,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 906137658203439102, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.514881
+      value: -20.789112
       objectReference: {fileID: 0}
     - target: {fileID: 906137658203439102, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 81.23612
+      value: 79.72526
       objectReference: {fileID: 0}
     - target: {fileID: 906137658203439102, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -27.873688
+      value: 35.21842
       objectReference: {fileID: 0}
     - target: {fileID: 906137658203439102, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9412887
+      value: 0.9959718
       objectReference: {fileID: 0}
     - target: {fileID: 906137658203439102, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.05823674
+      value: -0.05353004
       objectReference: {fileID: 0}
     - target: {fileID: 906137658203439102, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.33190364
+      value: 0.07183504
       objectReference: {fileID: 0}
     - target: {fileID: 906137658203439102, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.020591974
+      value: 0.0038029852
       objectReference: {fileID: 0}
     - target: {fileID: 906137658203439102, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -509,19 +514,12 @@ PrefabInstance:
       propertyPath: m_CameraActivatedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CinemachineCameraActivated
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9037153682958359820, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2889941361898741019, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 404083210}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
---- !u!1 &303665597 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2889941361898741019, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
-  m_PrefabInstance: {fileID: 303665596}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &319230326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8519341658548630571, guid: 581c9d90cd890d4409be51d5c3fd45b8, type: 3}
@@ -722,7 +720,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3776917582224036642, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
   m_PrefabInstance: {fileID: 1292440095722670335}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 781767824}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b5d7c088409d9a40b7b09aa707777f8, type: 3}
@@ -790,49 +788,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 906137658203439102, guid: 7b486e5b9c1a2754dae027c810d6ba41, type: 3}
   m_PrefabInstance: {fileID: 303665596}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &404083210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303665597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33a510488cc26384ea9c0600441770b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CameraActivatedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1845664736}
-        m_TargetAssemblyTypeName: SirMartin, Assembly-CSharp
-        m_MethodName: CinemachineCameraActivated
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  CameraDeactivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  BlendCreatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  BlendFinishedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  CameraCutEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  Brain: {fileID: 0}
-  BrainUpdatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &427699572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1311,7 @@ GameObject:
   - component: {fileID: 621535992}
   - component: {fileID: 621535994}
   - component: {fileID: 621535993}
+  - component: {fileID: 621535995}
   m_Layer: 0
   m_Name: EventCamera
   m_TagString: Untagged
@@ -1454,6 +1410,43 @@ MonoBehaviour:
     Hold: 1
   m_LegacyLookAt: {fileID: 0}
   m_LegacyFollow: {fileID: 0}
+--- !u!114 &621535995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621535991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c657da9fbf87ac4caa9deae71bbb343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTarget: {fileID: 0}
+  CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1845664736}
+        m_TargetAssemblyTypeName: SirMartin, Assembly-CSharp
+        m_MethodName: OnEventCameraActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CameraDeactivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendCreatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendFinishedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &668909183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,6 +1776,48 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 586f46a0aa0da234a9c182cb07969c88, type: 3}
+--- !u!1 &781767824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 22674095141335188, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+  m_PrefabInstance: {fileID: 1292440095722670335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &781767828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781767824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c657da9fbf87ac4caa9deae71bbb343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTarget: {fileID: 0}
+  CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1845664736}
+        m_TargetAssemblyTypeName: SirMartin, Assembly-CSharp
+        m_MethodName: OnOrbitalCameraActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CameraDeactivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendCreatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendFinishedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &804749102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1929,6 +1964,7 @@ GameObject:
   - component: {fileID: 994643249}
   - component: {fileID: 994643251}
   - component: {fileID: 994643252}
+  - component: {fileID: 994643253}
   m_Layer: 0
   m_Name: EventCamera
   m_TagString: Untagged
@@ -2007,6 +2043,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 3
+--- !u!114 &994643253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994643248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c657da9fbf87ac4caa9deae71bbb343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTarget: {fileID: 0}
+  CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1845664736}
+        m_TargetAssemblyTypeName: SirMartin, Assembly-CSharp
+        m_MethodName: OnEventCameraActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CameraDeactivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendCreatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendFinishedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1122466533
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,6 +2188,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1311432898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8230722583341523643, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+  m_PrefabInstance: {fileID: 1292440095722670335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1331887841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8176069143493545832, guid: bef345c3cf4ff244d8bae464aa44d8e4, type: 3}
@@ -2273,6 +2351,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6943959914467197331, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
   m_PrefabInstance: {fileID: 1292440095722670335}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1479686553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121090387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c657da9fbf87ac4caa9deae71bbb343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTarget: {fileID: 0}
+  CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1845664736}
+        m_TargetAssemblyTypeName: SirMartin, Assembly-CSharp
+        m_MethodName: OnAerialCameraActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CameraDeactivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendCreatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendFinishedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1545537179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,6 +2454,48 @@ Transform:
   - {fileID: 319230326}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1620883939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4245438079408948411, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+  m_PrefabInstance: {fileID: 1292440095722670335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1620883943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620883939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c657da9fbf87ac4caa9deae71bbb343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTarget: {fileID: 0}
+  CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1845664736}
+        m_TargetAssemblyTypeName: SirMartin, Assembly-CSharp
+        m_MethodName: OnFollowCameraActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CameraDeactivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendCreatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendFinishedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1798279570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 84ea39e3fa3a27c47ada456c322a4209, type: 3}
@@ -2504,6 +2661,7 @@ GameObject:
   - component: {fileID: 1839347458}
   - component: {fileID: 1839347457}
   - component: {fileID: 1839347459}
+  - component: {fileID: 1839347460}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -2615,6 +2773,43 @@ MonoBehaviour:
   AmplitudeGain: 1
   FrequencyGain: 1
   mNoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &1839347460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839347455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c657da9fbf87ac4caa9deae71bbb343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTarget: {fileID: 0}
+  CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1845664736}
+        m_TargetAssemblyTypeName: SirMartin, Assembly-CSharp
+        m_MethodName: OnLevelCameraActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CameraDeactivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendCreatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendFinishedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1845664736 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8641853547252914801, guid: b3b037ad16b24644cae906fd0991c2a8, type: 3}
@@ -2810,7 +3005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3776917582224036642, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
       propertyPath: HorizontalAxis.Value
-      value: 2.136342
+      value: 2.1363418
       objectReference: {fileID: 0}
     - target: {fileID: 3776917582224036642, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
       propertyPath: VerticalAxis.Range.x
@@ -2831,6 +3026,22 @@ PrefabInstance:
     - target: {fileID: 4720200260241029275, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
       propertyPath: m_XAxis.Value
       value: 2.1363525
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829689906471488221, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: Priority.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829689906471488221, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: Priority.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829689906471488221, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: m_LegacyPriority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829689906471488221, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: m_StreamingVersion
+      value: 20230301
       objectReference: {fileID: 0}
     - target: {fileID: 4829689906471488221, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
       propertyPath: Target.LookAtTarget
@@ -3029,6 +3240,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7877785340279158636, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: Priority.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877785340279158636, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: Priority.m_Value
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877785340279158636, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: m_LegacyPriority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877785340279158636, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      propertyPath: m_StreamingVersion
+      value: 20230301
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877785340279158636, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
       propertyPath: Target.LookAtTarget
       value: 
       objectReference: {fileID: 853583304}
@@ -3060,7 +3287,19 @@ PrefabInstance:
     - {fileID: 2350982878312967965, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5627823228322893031, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1479686553}
+    - targetCorrespondingSourceObject: {fileID: 4245438079408948411, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1620883943}
+    - targetCorrespondingSourceObject: {fileID: 22674095141335188, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 781767828}
+    - targetCorrespondingSourceObject: {fileID: 8230722583341523643, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1292440095722670342}
   m_SourcePrefab: {fileID: 100100000, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
 --- !u!4 &1292440095722670336 stripped
 Transform:
@@ -3072,12 +3311,49 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 364152424530537789, guid: dc88fcbddebc67a458c683955badad4a, type: 3}
   m_PrefabInstance: {fileID: 1292440095722670335}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1311432898}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62d54399b04b4fa48a73e121d4937dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1292440095722670342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311432898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c657da9fbf87ac4caa9deae71bbb343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTarget: {fileID: 0}
+  CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1845664736}
+        m_TargetAssemblyTypeName: SirMartin, Assembly-CSharp
+        m_MethodName: OnPOVCameraActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CameraDeactivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendCreatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendFinishedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &2881124336219293679
 PrefabInstance:
   m_ObjectHideFlags: 0

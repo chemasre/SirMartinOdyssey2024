@@ -253,88 +253,83 @@ public class SirMartin : MonoBehaviour
 
     }
 
-    public void CinemachineCameraActivated(ICinemachineMixer mixer, ICinemachineCamera activated)
+    public void OnAerialCameraActivated()
     {
-        // Este código se ejecuta cada vez que hay un cambio de cámara. En la variable activated
-        // recibimos la cámara que se ha activado
+            // Queremos que el jugador se pueda mover con esta cámara
 
-        Debug.Log("Activated camera " + activated.Name);
+            freezeControls = false;
 
-        // Realmente lo que recibimos en el activated no es la cámara exactamente pero lo podemos
-        // transformar en la cámara mediante esta operación que se llama "casting". Esta operación
-        // es un poco complicada pero la podéis imaginar de la siguiente forma. El sistema nos da
-        // un objeto que podría ser una cámara o no pero nosotros sí sabemos que es
-        // una cámara por lo que convertimos a ese tipo.
-        // Es un poco como si un policía encontrara un niño por la calle y lo devolviera a
-        // su madre. La madre recibe un niño pero ella sabe que es su hijo.
-
-        CinemachineVirtualCameraBase activatedCamera = (CinemachineVirtualCameraBase)activated;
-
-        if(activatedCamera.Priority.Value == 30)
-        {
-            // Si la cámara que se ha activado es de prioridad 30 quiere decir que es una cámara de evento
-            // y mientras esté activa no queremos que el jugador se mueva
-            freezeControls = true;
-        }
-        else if (activatedCamera.Priority.Value == 20)
-        {
-            // Si la cámara que se ha activado es de prioridad 20 quiere decir que es una cámara de nivel.
+            // La cámara que se ha activado es la aerial, que se controla en tercera persona.
             // Como no queremos que el personaje empiece a moverse en una dirección distinta de golpe por
             // el cambio de cámara, mantendremos la dirección de la cámara anterior.
             // Nos guardamos también hacia dónde está moviendo el mando ahora para que cuando lo mueva en
             // una dirección distinta, dejemos mantener la dirección.
+
             holdCameraDirection = true;
             holdedCameraDirection = cameraDirection;
             holdedInputDirection = inputDirection;
-            freezeControls = false;
             controlType = 1;
-        }
-        else if (activatedCamera.Priority.Value == 10 || activatedCamera.Priority.Value == 25)
-        {
-            // Se ha activado una cámara de jugador
-
-            freezeControls = false;
-
-            if (cameraSelector.selected == 0)
-            {
-                // La cámara que se ha activado es la aerial, que se controla en tercera persona.
-                // Como no queremos que el personaje empiece a moverse en una dirección distinta de golpe por
-                // el cambio de cámara, mantendremos la dirección de la cámara anterior.
-                // Nos guardamos también hacia dónde está moviendo el mando ahora para que cuando lo mueva en
-                // una dirección distinta, dejemos mantener la dirección.
-
-                holdCameraDirection = true;
-                holdedCameraDirection = cameraDirection;
-                holdedInputDirection = inputDirection;
-                controlType = 1;
-            }
-            else if (cameraSelector.selected == 1)
-            {
-                // La cámara que se ha activado es la follow.
-
-                holdCameraDirection = false;
-                controlType = 0;
-            }
-            else if (cameraSelector.selected == 2)
-            {
-                // La cámara que se ha activado es la orbital, que se controla en tercera persona.
-                // Como no queremos que el personaje empiece a moverse en una dirección distinta de golpe por
-                // el cambio de cámara, mantendremos la dirección de la cámara anterior.
-                // Nos guardamos también hacia dónde está moviendo el mando ahora para que cuando lo mueva en
-                // una dirección distinta, dejemos mantener la dirección.
-
-                holdCameraDirection = true;
-                holdedCameraDirection = cameraDirection;
-                holdedInputDirection = inputDirection;
-                controlType = 1;
-            }
-            else // cameraSelector.selected == 3
-            {
-                // La cámara que se ha activado es la POV.
-
-                holdCameraDirection = false;
-                controlType = 2;
-            }
-        }
     }
+
+    public void OnFollowCameraActivated()
+    {
+        // Queremos que el jugador se pueda mover con esta cámara
+
+        freezeControls = false;
+
+        // La cámara que se ha activado es la follow.
+
+        holdCameraDirection = false;
+        controlType = 0;
+    }
+
+    public void OnOrbitalCameraActivated()
+    {
+        // La cámara que se ha activado es la orbital, que se controla en tercera persona.
+        // Como no queremos que el personaje empiece a moverse en una dirección distinta de golpe por
+        // el cambio de cámara, mantendremos la dirección de la cámara anterior.
+        // Nos guardamos también hacia dónde está moviendo el mando ahora para que cuando lo mueva en
+        // una dirección distinta, dejemos mantener la dirección.
+
+        holdCameraDirection = true;
+        holdedCameraDirection = cameraDirection;
+        holdedInputDirection = inputDirection;
+        controlType = 1;
+    }
+
+    public void OnPOVCameraActivated()
+    {
+        // Queremos que el jugador se pueda mover con esta cámara
+
+        freezeControls = false;
+
+        // La cámara que se ha activado es la POV.
+
+        holdCameraDirection = false;
+        controlType = 2;
+    }
+
+    public void OnLevelCameraActivated()
+    {
+        // Si la cámara que se ha activado es una cámara de nivel.
+        // Como no queremos que el personaje empiece a moverse en una dirección distinta de golpe por
+        // el cambio de cámara, mantendremos la dirección de la cámara anterior.
+        // Nos guardamos también hacia dónde está moviendo el mando ahora para que cuando lo mueva en
+        // una dirección distinta, dejemos mantener la dirección.
+
+        holdCameraDirection = true;
+        holdedCameraDirection = cameraDirection;
+        holdedInputDirection = inputDirection;
+        freezeControls = false;
+        controlType = 1;
+    }
+
+    public void OnEventCameraActivated()
+    {
+        // Si la cámara que se ha activado es de evento
+        // no queremos que el jugador se pueda mover
+
+        freezeControls = true;
+    }
+
 }
