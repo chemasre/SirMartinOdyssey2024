@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Unity.Cinemachine;
 
 public class SirMartin : MonoBehaviour
 {
@@ -101,12 +98,21 @@ public class SirMartin : MonoBehaviour
             // no responda a los movimientos del jugador
             inputVertical = 0;
             inputHorizontal = 0;
+            movement.forward = 0;
+            movement.lateral = 0;
+            movement.rotate = 0;
         }
         else
         {
             // Obtenemos el input
             inputVertical = Input.GetAxis("Vertical");
             inputHorizontal = Input.GetAxis("Horizontal");
+        }
+
+        // Si el player no puede usar los controles, terminamos aquí el script
+        if(freezeControls)
+        {
+            return;
         }
 
         // A partir de aquí interpretamos el input del jugador

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Hit : MonoBehaviour
@@ -38,7 +36,7 @@ public class Hit : MonoBehaviour
         if(animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
         {
             animator.SetTrigger("Hit");
-            rigid.AddForce(-transform.forward * 10, ForceMode.Impulse);
+            rigid.AddForce(-transform.forward * 100, ForceMode.Impulse);
             hitSound.Play();
         }
     }

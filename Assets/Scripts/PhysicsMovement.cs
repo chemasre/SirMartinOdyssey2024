@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PhysicsMovement : MonoBehaviour
@@ -98,7 +96,7 @@ public class PhysicsMovement : MonoBehaviour
             {
                 rigid.AddForce(transform.right * lateral * 70);
                 rigid.AddForce(transform.forward * forward * 70);
-                rigid.AddTorque(Vector3.up * rotate * 3);
+                rigid.AddTorque(Vector3.up * rotate * 5);
             }
             else if(controlType == 1)
             {
