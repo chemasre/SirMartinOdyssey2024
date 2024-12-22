@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6032049520552055897}
   - component: {fileID: 3776917582224036642}
   - component: {fileID: 5771397005932001401}
+  - component: {fileID: 9080527967131008426}
   m_Layer: 0
   m_Name: Orbital
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22674095141335188}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.22975291, y: 0.000000016746096, z: -0.0000000039532173, w: 0.973249}
-  m_LocalPosition: {x: 23.79, y: 149.285, z: -49.86353}
+  m_LocalRotation: {x: -0.06485678, y: 0.018603202, z: 0.0012093006, w: 0.9977205}
+  m_LocalPosition: {x: 23.941132, y: 78.35757, z: -92.0567}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48,12 +49,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 10
   OutputChannel: 1
   StandbyUpdate: 2
-  m_StreamingVersion: 20170927
-  m_LegacyPriority: 10
+  m_StreamingVersion: 20230301
+  m_LegacyPriority: 0
   Target:
     TrackingTarget: {fileID: 0}
     LookAtTarget: {fileID: 0}
@@ -153,7 +154,7 @@ MonoBehaviour:
   VerticalAxis:
     Value: 4
     Center: 4
-    Range: {x: 4, y: 4}
+    Range: {x: 0, y: 90}
     Wrap: 0
     Recentering:
       Enabled: 0
@@ -191,12 +192,12 @@ MonoBehaviour:
       Enabled: 1
       Input:
         LegacyInput: Mouse X
-        LegacyGain: 300
+        LegacyGain: 200
         CancelDeltaTime: 0
       InputValue: 0
       Driver:
-        AccelTime: 0.1
-        DecelTime: 0.1
+        AccelTime: 0.2
+        DecelTime: 0.2
     - Name: Look Orbit Y
       Owner: {fileID: 3776917582224036642}
       Enabled: 1
@@ -219,6 +220,43 @@ MonoBehaviour:
       Driver:
         AccelTime: 0
         DecelTime: 0
+--- !u!114 &9080527967131008426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22674095141335188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c657da9fbf87ac4caa9deae71bbb343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTarget: {fileID: 0}
+  CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SirMartin, Assembly-CSharp
+        m_MethodName: OnOrbitalCameraActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CameraDeactivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendCreatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendFinishedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2553516116782330936
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +304,7 @@ GameObject:
   - component: {fileID: 249681322474413835}
   - component: {fileID: 9028641528398659143}
   - component: {fileID: 4826591821451663029}
+  - component: {fileID: 6388505955499882355}
   m_Layer: 0
   m_Name: Follow
   m_TagString: Untagged
@@ -281,8 +320,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4245438079408948411}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.000000014901161, z: -0, w: 1}
-  m_LocalPosition: {x: 24.490002, y: 146.68501, z: -47.283527}
+  m_LocalRotation: {x: -0, y: -0.018642172, z: -0, w: -0.99982625}
+  m_LocalPosition: {x: 24.959578, y: 79.060005, z: -83.533104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -301,12 +340,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 25
   OutputChannel: 1
   StandbyUpdate: 2
-  m_StreamingVersion: 20170927
-  m_LegacyPriority: 10
+  m_StreamingVersion: 20230301
+  m_LegacyPriority: 0
   Target:
     TrackingTarget: {fileID: 0}
     LookAtTarget: {fileID: 0}
@@ -374,6 +413,43 @@ MonoBehaviour:
     CameraRadius: 0.2
     DampingIntoCollision: 0
     DampingFromCollision: 2
+--- !u!114 &6388505955499882355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245438079408948411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c657da9fbf87ac4caa9deae71bbb343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTarget: {fileID: 0}
+  CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SirMartin, Assembly-CSharp
+        m_MethodName: OnFollowCameraActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CameraDeactivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendCreatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendFinishedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5627823228322893031
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +461,7 @@ GameObject:
   - component: {fileID: 6943959914467197331}
   - component: {fileID: 4829689906471488221}
   - component: {fileID: 6818281818378243356}
+  - component: {fileID: 1292111746237460207}
   m_Layer: 0
   m_Name: Aerial
   m_TagString: Untagged
@@ -401,7 +478,7 @@ Transform:
   m_GameObject: {fileID: 5627823228322893031}
   serializedVersion: 2
   m_LocalRotation: {x: 0.10100859, y: 0.20892122, z: -0.02170047, w: 0.9724599}
-  m_LocalPosition: {x: 18.516403, y: 151.98145, z: -57.570484}
+  m_LocalPosition: {x: 19.0394, y: 84.35644, z: -93.79496}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -420,12 +497,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 10
   OutputChannel: 1
   StandbyUpdate: 2
-  m_StreamingVersion: 20170927
-  m_LegacyPriority: 10
+  m_StreamingVersion: 20230301
+  m_LegacyPriority: 0
   Target:
     TrackingTarget: {fileID: 0}
     LookAtTarget: {fileID: 0}
@@ -481,6 +558,43 @@ MonoBehaviour:
       Size: {x: 0.8, y: 0.8}
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
+--- !u!114 &1292111746237460207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5627823228322893031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c657da9fbf87ac4caa9deae71bbb343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTarget: {fileID: 0}
+  CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SirMartin, Assembly-CSharp
+        m_MethodName: OnAerialCameraActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CameraDeactivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendCreatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendFinishedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8230722583341523643
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,6 +608,7 @@ GameObject:
   - component: {fileID: 5241310869251739305}
   - component: {fileID: 364152424530537789}
   - component: {fileID: 6571550544612636270}
+  - component: {fileID: 5882015852974676265}
   m_Layer: 0
   m_Name: POV
   m_TagString: Untagged
@@ -510,7 +625,7 @@ Transform:
   m_GameObject: {fileID: 8230722583341523643}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.763924, y: 146.66798, z: -45.34835}
+  m_LocalPosition: {x: 24.306145, y: 79.042984, z: -81.572205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -529,16 +644,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 25
   OutputChannel: 1
   StandbyUpdate: 2
-  m_StreamingVersion: 20170927
-  m_LegacyPriority: 10
+  m_StreamingVersion: 20230301
+  m_LegacyPriority: 0
   Target:
     TrackingTarget: {fileID: 0}
     LookAtTarget: {fileID: 0}
-    CustomLookAtTarget: 0
+    CustomLookAtTarget: 1
   Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
@@ -626,20 +741,57 @@ MonoBehaviour:
       Enabled: 1
       Input:
         LegacyInput: Mouse X
-        LegacyGain: 600
+        LegacyGain: 400
         CancelDeltaTime: 0
       InputValue: 0
       Driver:
-        AccelTime: 0.1
-        DecelTime: 0.1
+        AccelTime: 0.2
+        DecelTime: 0.2
     - Name: Look Y (Tilt)
       Owner: {fileID: 364152424530537789}
       Enabled: 1
       Input:
         LegacyInput: Mouse Y
-        LegacyGain: 600
+        LegacyGain: -400
         CancelDeltaTime: 0
       InputValue: 0
       Driver:
-        AccelTime: 0.1
-        DecelTime: 0.1
+        AccelTime: 0.2
+        DecelTime: 0.2
+--- !u!114 &5882015852974676265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8230722583341523643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c657da9fbf87ac4caa9deae71bbb343, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTarget: {fileID: 0}
+  CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SirMartin, Assembly-CSharp
+        m_MethodName: OnPOVCameraActivated
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CameraDeactivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendCreatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  BlendFinishedEvent:
+    m_PersistentCalls:
+      m_Calls: []

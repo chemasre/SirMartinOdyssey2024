@@ -6,6 +6,8 @@ public class Hit : MonoBehaviour
 {
     public Animator animator;
     public Sensor hitSensor;
+    public AudioSource hitSound;
+    public Rigidbody rigid;
 
     public bool testHit;
 
@@ -36,6 +38,8 @@ public class Hit : MonoBehaviour
         if(animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
         {
             animator.SetTrigger("Hit");
+            rigid.AddForce(-transform.forward * 10, ForceMode.Impulse);
+            hitSound.Play();
         }
     }
 }

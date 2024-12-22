@@ -19,6 +19,11 @@ public class PhysicsMovement : MonoBehaviour
 
     public Vector3 direction;
 
+    public AudioSource jumpSound;
+    public AudioSource landSound;
+    public GameObject jumpParticlesPrefab;
+    public ParticleSystem runParticles;
+
     float jumpCooldown;
 
     // Start is called before the first frame update
@@ -51,11 +56,29 @@ public class PhysicsMovement : MonoBehaviour
         // Pasamos el valor de la velocidad al animator
         animator.SetFloat("Speed", velocity.magnitude);
 
+        if(groundSensor.entered)
+        {
+            Instantiate(jumpParticlesPrefab, transform.position, transform.rotation);
+            landSound.Play();
+        }
+
         // Si estamos cayendo, pasamos la velocidad Y como fall speed
         if(groundSensor.presence == false || jumpCooldown > 0)
-        { animator.SetFloat("FallSpeed", velocityY); }
+        {
+            runParticles.Pause();
+
+            animator.SetFloat("Grounded", 0);
+            animator.SetFloat("FallSpeed", velocityY);
+            rigid.drag = 0;
+        }
         else
-        { animator.SetFloat("FallSpeed", 0); }
+        {
+            runParticles.Play();
+
+            animator.SetFloat("Grounded", 1);
+            animator.SetFloat("FallSpeed", 0);
+            rigid.drag = 5;
+        }
 
         // Volvemos a poner la velocidad Y para que siga cayendo
         velocity.y = velocityY;
@@ -69,36 +92,43 @@ public class PhysicsMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(controlType == 0)
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
         {
-            rigid.AddForce(transform.right * lateral * 70);
-            rigid.AddForce(transform.forward * forward * 70);
-            rigid.AddTorque(Vector3.up * rotate * 3);
-        }
-        else if(controlType == 1)
-        {
-            if(forward > 0)
+            if(controlType == 0)
+            {
+                rigid.AddForce(transform.right * lateral * 70);
+                rigid.AddForce(transform.forward * forward * 70);
+                rigid.AddTorque(Vector3.up * rotate * 3);
+            }
+            else if(controlType == 1)
+            {
+                if(forward > 0)
+                {
+                    Quaternion lookRotation = Quaternion.LookRotation(direction);
+
+                    rigid.MoveRotation(lookRotation);
+                    rigid.AddForce(transform.forward * forward * 70);
+                }
+            }
+            else // controlType == 2
             {
                 Quaternion lookRotation = Quaternion.LookRotation(direction);
-
                 rigid.MoveRotation(lookRotation);
                 rigid.AddForce(transform.forward * forward * 70);
+                rigid.AddForce(transform.right * lateral * 70);
             }
+
         }
-        else // controlType == 2
-        {
-            Quaternion lookRotation = Quaternion.LookRotation(direction);
-            rigid.MoveRotation(lookRotation);
-            rigid.AddForce(transform.forward * forward * 70);
-            rigid.AddForce(transform.right * lateral * 70);
-        }
+
     }
 
     public void Jump()
     {
         if(groundSensor.presence && jumpCooldown <= 0)
         {
-            rigid.AddForce(Vector3.up * 30, ForceMode.VelocityChange);
+            jumpSound.Play();
+            Instantiate(jumpParticlesPrefab, transform.position, transform.rotation);
+            rigid.AddForce(Vector3.up * 15, ForceMode.VelocityChange);
             jumpCooldown = 0.3f;
         }
     }

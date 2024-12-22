@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackSword : MonoBehaviour
@@ -28,9 +26,11 @@ public class AttackSword : MonoBehaviour
 
     public void Attack()
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
+        if (animator.GetCurrentAnimatorStateInfo(1).IsName("Nothing"))
         {
             animator.SetTrigger("Attack");
         }
     }
+
+
 }
