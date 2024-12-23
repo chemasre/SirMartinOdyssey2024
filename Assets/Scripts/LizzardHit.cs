@@ -20,6 +20,34 @@ public class LizzardHit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        hitSensor.gameObject.SetActive(false);
+
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("FirePrepare"))
+        {
+            hitSensor.gameObject.SetActive(true);
+        }
+
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("FireHold"))
+        {
+            hitSensor.gameObject.SetActive(true);
+        }
+
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("FireStart"))
+        {
+            hitSensor.gameObject.SetActive(true);
+        }
+
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Movement"))
+        {
+            hitSensor.gameObject.SetActive(true);
+        }
+
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Slash"))
+        {
+            hitSensor.gameObject.SetActive(true);
+        }
+
+
         if(hitSensor.entered)
         {
             ReceiveHit();
