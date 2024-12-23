@@ -3,7 +3,17 @@ guid: 9f21f7c7d581f954b80731196893cf15
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Switch1
+    second: {fileID: 2100000, guid: 63e6af9180e4db149b6d292a2384969b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Switch2
+    second: {fileID: 2100000, guid: f79aeaec45a40e64bb4896f1838e528c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
